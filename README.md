@@ -90,3 +90,6 @@ docker compose up -d
 - `Dataset type` は `Persistent` を選択し、 `create dataset` ボタンを押す
 - 画面上部のメニューバーから `dataset` をクリックした後、画面上部の `Dataset:` ドロップダウンメニューで、先ほど入力したデータセットが選択されていることを確認する
 - 画面にはサンプルのSPARQLクエリが自動で入力されているので、画面右側の再生ボタンをクリックしてクエリ結果が表示されれば、一連のSPARQLエンドポイントの作成は成功である
+
+# 重要参考情報
+https://hub.docker.com/r/stain/jena-fuseki#Data_persistence
