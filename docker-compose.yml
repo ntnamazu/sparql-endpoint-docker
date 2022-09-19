@@ -7,3 +7,17 @@ services:
         published: 8080
         protocol: tcp
         mode: host
+    volumes:
+        # 読み込んだデータの永続化ボリュームである
+      - type: volume
+        source: fuseki-data
+        target: /fuseki
+        # ロードするRDFファイルを配置するstagingフォルダのバインドマウントである
+      - type: bind
+        source: ./staging
+        target: /staging
+    environment:
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      JVM_ARGS: ${JVM_ARGS}
+volumes:
+  fuseki-data:
