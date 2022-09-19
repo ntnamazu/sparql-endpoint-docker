@@ -4,7 +4,7 @@ services:
     image: stain/jena-fuseki:4.0.0
     ports:
       - target: 3030
-        published: 8080
+        published: ${PORT}
         protocol: tcp
         mode: host
     volumes:
